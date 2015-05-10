@@ -1,0 +1,16 @@
+template(name="editPage")
+   if _id
+      h1 Pagina aanpassen
+   else
+      h1 Pagina aanmaken
+   .form-group
+      label(for="title") Titel
+      input.form-control#title(value="{{title}}")
+   .form-group
+      +preview
+   .form-group
+      label(for="text") Tekst
+      textarea.form-control#text {{text}}
+   .form-group
+      button.btn.btn-primary#save Opslaan
+
